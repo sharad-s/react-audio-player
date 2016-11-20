@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactAudioPlayer from '../../src/index.jsx';
+import ReactAudioPlayer from '../../src/index';
 
 ReactDOM.render(
   <ReactAudioPlayer

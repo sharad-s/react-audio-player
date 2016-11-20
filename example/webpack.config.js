@@ -20,6 +20,9 @@ module.exports = {
     port: PORT,
     hot: true,
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
   module: {
     loaders: [
       {
