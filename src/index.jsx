@@ -107,7 +107,7 @@ class ReactAudioPlayer extends React.Component {
 }
 
 ReactAudioPlayer.propTypes = {
-  autoPlay: React.PropTypes.string,
+  autoPlay: React.PropTypes.bool,
   children: React.PropTypes.array,
   listenInterval: React.PropTypes.number,
   onAbort: React.PropTypes.func,
