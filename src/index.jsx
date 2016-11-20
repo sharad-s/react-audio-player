@@ -88,7 +88,7 @@ class ReactAudioPlayer extends React.Component {
     );
 
     // Set controls to be true by default unless explicity stated otherwise
-    const controls = this.props.controls === false ? false : true;
+    const controls = !(this.props.controls === false);
 
     return (
       <audio
@@ -97,7 +97,7 @@ class ReactAudioPlayer extends React.Component {
         autoPlay={this.props.autoPlay}
         preload={this.props.preload}
         controls={controls}
-        ref={(ref) => this.audioEl = ref}
+        ref={(ref) => { this.audioEl = ref; }}
         onPlay={this.onPlay}
       >
         {incompatibilityMessage}
@@ -107,8 +107,8 @@ class ReactAudioPlayer extends React.Component {
 }
 
 ReactAudioPlayer.propTypes = {
-  autoPlay: React.PropTypes.string,
-  children: React.PropTypes.array,
+  autoPlay: React.PropTypes.bool,
+  children: React.PropTypes.element,
   listenInterval: React.PropTypes.number,
   onAbort: React.PropTypes.func,
   onCanPlay: React.PropTypes.func,
@@ -121,7 +121,7 @@ ReactAudioPlayer.propTypes = {
   onSeeked: React.PropTypes.func,
   preload: React.PropTypes.string,
   src: React.PropTypes.string,
-  controls: React.PropTypes.bool
+  controls: React.PropTypes.bool,
 };
 
 export default ReactAudioPlayer;

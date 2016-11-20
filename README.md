@@ -9,8 +9,12 @@ This is a light React wrapper around the HTML5 audio tag.  It provides the abili
 
     <ReactAudioPlayer
       src="my_audio_file.ogg"
-      autoPlay="true"
+      autoPlay
     />
+
+### Example
+
+See the example directory for a basic working example of using this.  You can run it with the command `npm run example`.
 
 ## API
 
