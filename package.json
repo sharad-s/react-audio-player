@@ -1,7 +1,7 @@
 {
   "name": "react-audio-player",
-  "version": "0.3.0",
-  "description": "A simple React wrapper for the <audio> tag",
+  "version": "0.3.1",
+  "description": "A simple React wrapper for the audio tag",
   "main": "dist/bundle.js",
   "scripts": {
     "test": "karma start",
@@ -24,8 +24,8 @@
   "author": "Justin McCandless",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "react": "15.x",
+    "react-dom": "15.x"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",
