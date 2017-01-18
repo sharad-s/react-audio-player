@@ -7,6 +7,8 @@ This is a light React wrapper around the HTML5 audio tag.  It provides the abili
 
 ## Usage
 
+    import ReactAudioPlayer from 'react-audio-player';
+    //...
     <ReactAudioPlayer
       src="my_audio_file.ogg"
       autoPlay
