@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 const DEFAULT_LISTEN_INTERVAL = 10000;
 
-class ReactAudioPlayer extends React.Component {
+class ReactAudioPlayer extends Component {
   componentDidMount() {
     const audio = this.audioEl;
 
@@ -92,7 +92,7 @@ class ReactAudioPlayer extends React.Component {
 
     return (
       <audio
-        className="react-audio-player"
+        className={`react-audio-player ${this.props.className}`}
         src={this.props.src || ''}
         autoPlay={this.props.autoPlay}
         preload={this.props.preload}
@@ -109,6 +109,7 @@ class ReactAudioPlayer extends React.Component {
 ReactAudioPlayer.propTypes = {
   autoPlay: React.PropTypes.bool,
   children: React.PropTypes.element,
+  className: React.PropTypes.string,
   listenInterval: React.PropTypes.number,
   onAbort: React.PropTypes.func,
   onCanPlay: React.PropTypes.func,
