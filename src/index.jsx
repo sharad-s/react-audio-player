@@ -92,7 +92,8 @@ class ReactAudioPlayer extends React.Component {
 
     return (
       <audio
-        className="react-audio-player"
+        className={`react-audio-player ${this.props.className}`}
+        style={this.props.style}
         src={this.props.src || ''}
         autoPlay={this.props.autoPlay}
         preload={this.props.preload}
@@ -122,6 +123,8 @@ ReactAudioPlayer.propTypes = {
   preload: React.PropTypes.string,
   src: React.PropTypes.string,
   controls: React.PropTypes.bool,
+  className: React.PropTypes.string,
+  style: React.PropTypes.object
 };
 
 export default ReactAudioPlayer;
