@@ -7,6 +7,8 @@ This is a light React wrapper around the HTML5 audio tag.  It provides the abili
 
 ## Usage
 
+    import ReactAudioPlayer from 'react-audio-player';
+    //...
     <ReactAudioPlayer
       src="my_audio_file.ogg"
       autoPlay
@@ -54,7 +56,7 @@ Indicates whether the browser should preload the media. See the [audio tag docum
 You can get direct access to the underlying audio element.  First get a ref to ReactAudioPlayer:
 
     <ReactAudioPlayer
-      ref={c => { this.rap = c }
+      ref={c => this.rap = c }
     />
 
 Then you can access the audio element like this:
