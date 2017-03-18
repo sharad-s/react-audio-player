@@ -124,7 +124,7 @@ ReactAudioPlayer.propTypes = {
   preload: React.PropTypes.string,
   src: React.PropTypes.string,
   controls: React.PropTypes.bool,
-  style: React.PropTypes.object
+  style: React.PropTypes.object,
 };
 
 export default ReactAudioPlayer;
