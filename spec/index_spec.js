@@ -28,6 +28,22 @@ describe('ReactAudioPlayer', function() {
     expect(instanceEl.getAttribute('loop')).not.toBe(null);
   })
 
+  it('receives all custom props', function() {
+    const instance = ReactTestUtils.renderIntoDocument(
+      <ReactAudioPlayer
+        src={song}
+        loop="loop"
+        name="custom-name"
+        data-id="custom-data"
+      />
+    );
+
+    const props = Object.keys(instance.props);
+
+    expect(props).toContain('name');
+    expect(props).toContain('data-id');
+  })
+
   describe('when can play', function() {
     it('calls onCanPlay', function(done) {
       var onCanPlay = jasmine.createSpy('onCanPlay').and.callFake(function() {
