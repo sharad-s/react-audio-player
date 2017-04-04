@@ -92,7 +92,7 @@ class ReactAudioPlayer extends Component {
 
     return (
       <audio
-        className={`react-audio-player ${this.props.className}`}
+        className={`react-audio-player ${this.props.className || ''}`}
         style={this.props.style}
         src={this.props.src || ''}
         autoPlay={this.props.autoPlay}
@@ -100,6 +100,8 @@ class ReactAudioPlayer extends Component {
         controls={controls}
         ref={(ref) => { this.audioEl = ref; }}
         onPlay={this.onPlay}
+        loop={this.props.loop}
+        {...this.props}
       >
         {incompatibilityMessage}
       </audio>

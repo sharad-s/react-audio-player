@@ -15,6 +15,19 @@ describe('ReactAudioPlayer', function() {
     expect(instanceEl.tagName).toBe('AUDIO');
   });
 
+  it('sets the loop attribute if provided', function() {
+    const instance = ReactTestUtils.renderIntoDocument(
+      <ReactAudioPlayer
+        src={song}
+        loop="loop"
+      />
+    );
+
+    const instanceEl = ReactDOM.findDOMNode(instance);
+
+    expect(instanceEl.getAttribute('loop')).not.toBe(null);
+  })
+
   describe('when can play', function() {
     it('calls onCanPlay', function(done) {
       var onCanPlay = jasmine.createSpy('onCanPlay').and.callFake(function() {
@@ -25,7 +38,7 @@ describe('ReactAudioPlayer', function() {
       ReactTestUtils.renderIntoDocument(
         <ReactAudioPlayer
           src={song}
-          autoPlay="true"
+          autoPlay={true}
           onCanPlay={onCanPlay}
         />
       );
@@ -42,7 +55,7 @@ describe('ReactAudioPlayer', function() {
       ReactTestUtils.renderIntoDocument(
         <ReactAudioPlayer
           src={song}
-          autoPlay="true"
+          autoPlay={true}
           onCanPlayThrough={onCanPlayThrough}
         />
       );
