@@ -114,6 +114,7 @@ ReactAudioPlayer.propTypes = {
   children: React.PropTypes.element,
   className: React.PropTypes.string,
   listenInterval: React.PropTypes.number,
+  loop: React.PropTypes.bool,
   onAbort: React.PropTypes.func,
   onCanPlay: React.PropTypes.func,
   onCanPlayThrough: React.PropTypes.func,
