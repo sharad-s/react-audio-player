@@ -102,6 +102,7 @@ class ReactAudioPlayer extends Component {
         ref={(ref) => { this.audioEl = ref; }}
         onPlay={this.onPlay}
         loop={this.props.loop}
+        {...this.props}
       >
         {incompatibilityMessage}
       </audio>
