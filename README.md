@@ -12,13 +12,37 @@ This is a light React wrapper around the HTML5 audio tag.  It provides the abili
     <ReactAudioPlayer
       src="my_audio_file.ogg"
       autoPlay
+      controls
     />
 
 ### Example
 
 See the example directory for a basic working example of using this.  You can run it with the command `npm run example`.
 
-## API
+## Props
+
+### Props - Native/React Attributes
+See the [audio tag documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) for detailed explanations of these attributes.
+
+#### autoPlay {Bool} [false]
+
+#### children {Element} [null]
+
+#### className {String} ['']
+
+#### controls {Bool} [false]
+
+#### loop {Bool} [false]
+
+#### muted {Bool} [false]
+
+#### preload {String} ['metadata']
+
+#### src {String} ['']
+
+#### style {Object} [{}]
+
+### Props - Events
 
 #### listenInterval {Number} [10000]
 Indicates how often to call the `onListened` prop during playback, in milliseconds.
@@ -28,6 +52,9 @@ Called when unloading the audio player, like when switching to a different src f
 
 #### onCanPlay {Function}
 Called when enough of the file has been downloaded to be able to start playing.  Passed the event.
+
+#### onCanPlayThrough {Function}
+Called when enough of the file has been downloaded to play through the entire file.  Passed the event.
 
 #### onEnded {Function}
 Called when playback has finished to the end of the file. Passed the event.
@@ -47,16 +74,13 @@ Called when the user taps play.  Passed the event.
 #### onSeeked {Function}
 Called when the user drags the time indicator to a new time. Passed the event.
 
-#### preload {String}
-Indicates whether the browser should preload the media. See the [audio tag documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) for details.
-
 ## Advanced Usage
 
 ### Access to the audio element
 You can get direct access to the underlying audio element.  First get a ref to ReactAudioPlayer:
 
     <ReactAudioPlayer
-      ref={c => this.rap = c }
+      ref={(element) => { this.rap = element; }}
     />
 
 Then you can access the audio element like this:
