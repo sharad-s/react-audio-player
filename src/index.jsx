@@ -50,15 +50,6 @@ class ReactAudioPlayer extends Component {
     });
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.selectedPlayerEvent) {
-      const audio = this.audioEl;
-
-      audio.currentTime = nextProps.selectedPlayerEvent.playTime;
-      audio.play();
-    }
-  }
-
   /**
    * Set an interval to call props.onListen every props.listenInterval time period
    */
