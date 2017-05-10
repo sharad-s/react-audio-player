@@ -95,6 +95,7 @@ class ReactAudioPlayer extends Component {
         className={`react-audio-player ${this.props.className}`}
         controls={controls}
         loop={this.props.loop}
+        muted={this.props.muted}
         onPlay={this.onPlay}
         preload={this.props.preload}
         ref={(ref) => { this.audioEl = ref; }}
@@ -114,6 +115,7 @@ ReactAudioPlayer.defaultProps = {
   controls: false,
   listenInterval: 10000,
   loop: false,
+  muted: false,
   onAbort: () => {},
   onCanPlay: () => {},
   onCanPlayThrough: () => {},
@@ -135,6 +137,7 @@ ReactAudioPlayer.propTypes = {
   controls: PropTypes.bool,
   listenInterval: PropTypes.number,
   loop: PropTypes.bool,
+  muted: PropTypes.bool,
   onAbort: PropTypes.func,
   onCanPlay: PropTypes.func,
   onCanPlayThrough: PropTypes.func,

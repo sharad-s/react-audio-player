@@ -62,3 +62,5 @@ You can get direct access to the underlying audio element.  First get a ref to R
 Then you can access the audio element like this:
 
     this.rap.audioEl
+
+This is especially useful if you need access to read-only attributes of the audio tag such as `buffered` and `played`.  See the [audio tag documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) for more on these attributes.
