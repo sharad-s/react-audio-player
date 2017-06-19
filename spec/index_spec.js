@@ -38,10 +38,8 @@ describe('ReactAudioPlayer', function() {
     );
 
     const instanceEl = ReactDOM.findDOMNode(instance);
-    console.log(instanceEl.getAttribute("title"));
-    console.log(instanceEl.getAttribute("src"));
+    
     expect(instanceEl.getAttribute("title")).toBe("Turkish march");
-
   })
 
   it('receives all custom props', function() {
