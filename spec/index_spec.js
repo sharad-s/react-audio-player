@@ -28,6 +28,22 @@ describe('ReactAudioPlayer', function() {
     expect(instanceEl.getAttribute('loop')).not.toBe(null);
   })
 
+  it('sets title', function() {
+    const instance = ReactTestUtils.renderIntoDocument(
+      <ReactAudioPlayer
+        src={song}
+        loop={false}
+        title="Turkish march"
+      />
+    );
+
+    const instanceEl = ReactDOM.findDOMNode(instance);
+    console.log(instanceEl.getAttribute("title"));
+    console.log(instanceEl.getAttribute("src"));
+    expect(instanceEl.getAttribute("title")).toBe("Turkish march");
+
+  })
+
   it('receives all custom props', function() {
     const instance = ReactTestUtils.renderIntoDocument(
       <ReactAudioPlayer
