@@ -123,7 +123,7 @@ ReactAudioPlayer.defaultProps = {
   preload: 'metadata',
   src: null,
   style: {},
-  title: ''
+  title: '',
 };
 
 ReactAudioPlayer.propTypes = {
@@ -146,7 +146,7 @@ ReactAudioPlayer.propTypes = {
   preload: PropTypes.oneOf(['', 'none', 'metadata', 'auto']),
   src: PropTypes.string, // Not required b/c can use <source>
   style: PropTypes.objectOf(PropTypes.string),
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default ReactAudioPlayer;
