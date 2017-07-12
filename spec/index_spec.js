@@ -38,7 +38,7 @@ describe('ReactAudioPlayer', function() {
     );
 
     const instanceEl = ReactDOM.findDOMNode(instance);
-    
+
     expect(instanceEl.getAttribute("title")).toBe("Turkish march");
   })
 
@@ -49,6 +49,7 @@ describe('ReactAudioPlayer', function() {
         loop="loop"
         name="custom-name"
         data-id="custom-data"
+        controlsList="nodownload"
       />
     );
 
@@ -56,7 +57,8 @@ describe('ReactAudioPlayer', function() {
 
     expect(props).toContain('name');
     expect(props).toContain('data-id');
-  })
+    expect(props).toContain('controlsList');
+  });
 
   describe('when can play', function() {
     it('calls onCanPlay', function(done) {
