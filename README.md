@@ -74,6 +74,9 @@ Called when the user taps play.  Passed the event.
 #### onSeeked {Function}
 Called when the user drags the time indicator to a new time. Passed the event.
 
+#### onLoadedMetadata {Function}
+Called when the metadata for the given audio file has finished downloading.  Passed the event.
+
 ## Advanced Usage
 
 ### Access to the audio element
