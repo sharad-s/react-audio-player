@@ -48,6 +48,10 @@ class ReactAudioPlayer extends Component {
       this.clearListenTrack();
       this.props.onSeeked(e);
     });
+
+    audio.addEventListener('loadedmetadata', (e) => {
+      this.props.onLoadedMetadata(e);
+    });
   }
 
   /**
@@ -120,6 +124,7 @@ ReactAudioPlayer.defaultProps = {
   onPause: () => {},
   onPlay: () => {},
   onSeeked: () => {},
+  onLoadedMetadata: () => {},
   preload: 'metadata',
   src: null,
   style: {},
@@ -143,6 +148,7 @@ ReactAudioPlayer.propTypes = {
   onPause: PropTypes.func,
   onPlay: PropTypes.func,
   onSeeked: PropTypes.func,
+  onLoadedMetadata: PropTypes.func,
   preload: PropTypes.oneOf(['', 'none', 'metadata', 'auto']),
   src: PropTypes.string, // Not required b/c can use <source>
   style: PropTypes.objectOf(PropTypes.string),
