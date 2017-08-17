@@ -45,7 +45,6 @@ class ReactAudioPlayer extends Component {
 
     // When the user drags the time indicator to a new time
     audio.addEventListener('seeked', (e) => {
-      this.clearListenTrack();
       this.props.onSeeked(e);
     });
 
