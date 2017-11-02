@@ -32,6 +32,9 @@ See the [audio tag documentation](https://developer.mozilla.org/en-US/docs/Web/H
 
 #### controls {Bool} [false]
 
+#### controlsList {String} ['']
+_For Chrome 58+. Only available in React 15.6.2+_
+
 #### loop {Bool} [false]
 
 #### muted {Bool} [false]

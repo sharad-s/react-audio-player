@@ -86,6 +86,12 @@ class ReactAudioPlayer extends Component {
     // Set lockscreen / process audio title on devices
     const title = this.props.title ? this.props.title : this.props.src;
 
+    // Some props should only be added if specified
+    const conditionalProps = {};
+    if (this.props.controlsList) {
+      conditionalProps.controlsList = this.props.controlsList;
+    }
+
     return (
       <audio
         autoPlay={this.props.autoPlay}
@@ -99,6 +105,7 @@ class ReactAudioPlayer extends Component {
         src={this.props.src}
         style={this.props.style}
         title={title}
+        {...conditionalProps}
       >
         {incompatibilityMessage}
       </audio>
@@ -111,6 +118,7 @@ ReactAudioPlayer.defaultProps = {
   children: null,
   className: '',
   controls: false,
+  controlsList: '',
   listenInterval: 10000,
   loop: false,
   muted: false,
@@ -135,6 +143,7 @@ ReactAudioPlayer.propTypes = {
   children: PropTypes.element,
   className: PropTypes.string,
   controls: PropTypes.bool,
+  controlsList: PropTypes.string,
   listenInterval: PropTypes.number,
   loop: PropTypes.bool,
   muted: PropTypes.bool,
