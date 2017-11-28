@@ -5,6 +5,8 @@ This is a light React wrapper around the HTML5 audio tag.  It provides the abili
 
     npm install --save react-audio-player
 
+Also be sure you have `react` and `react-dom` installed in your app at version 15 or above.
+
 ## Usage
 
     import ReactAudioPlayer from 'react-audio-player';
@@ -17,7 +19,7 @@ This is a light React wrapper around the HTML5 audio tag.  It provides the abili
 
 ### Example
 
-See the example directory for a basic working example of using this.  You can run it with the command `npm run example`.
+See the example directory for a basic working example of using this project.  To run it locally, run `npm install` in the example directory and then `npm start`.
 
 ## Props
 

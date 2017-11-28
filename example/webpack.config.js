@@ -8,7 +8,7 @@ module.exports = {
     app: [
       `webpack-dev-server/client?http://0.0.0.0:${PORT}`,
       'webpack/hot/only-dev-server',
-      './example/js/main.jsx',
+      './js/main.jsx',
     ],
   },
   output: {
