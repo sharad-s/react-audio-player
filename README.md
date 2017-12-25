@@ -41,6 +41,8 @@ _For Chrome 58+. Only available in React 15.6.2+_
 
 #### muted {Bool} [false]
 
+#### volume {Number} [1.0]
+
 #### preload {String} ['metadata']
 
 #### src {String} ['']
