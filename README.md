@@ -81,6 +81,9 @@ Called when the user taps play.  Passed the event.
 #### onSeeked {Function}
 Called when the user drags the time indicator to a new time. Passed the event.
 
+#### onVolumeChanged {Function}
+Called when the user changes the volume, such as by dragging the volume slider.
+
 #### onLoadedMetadata {Function}
 Called when the metadata for the given audio file has finished downloading.  Passed the event.
 
