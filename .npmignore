@@ -1,1 +1,5 @@
 src/
+example/
+spec/
+karma.conf.js
+webpack.config.js
