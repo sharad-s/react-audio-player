@@ -34,8 +34,13 @@ See the [audio tag documentation](https://developer.mozilla.org/en-US/docs/Web/H
 
 #### controls {Bool} [false]
 
+#### crossOrigin {String} ['']
+See [MDN's article on CORS](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes) for more about this attribute.
+
 #### controlsList {String} ['']
 _For Chrome 58+. Only available in React 15.6.2+_
+
+#### id {String} ['']
 
 #### loop {Bool} [false]
 
