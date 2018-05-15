@@ -141,7 +141,7 @@ ReactAudioPlayer.defaultProps = {
   className: '',
   controls: false,
   controlsList: '',
-  crossOrigin:'',
+  crossOrigin: null,
   id: '',
   listenInterval: 10000,
   loop: false,
