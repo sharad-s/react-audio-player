@@ -23,6 +23,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
+  // TODO this is v1, move to v3!
   module: {
     loaders: [
       {
