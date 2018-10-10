@@ -21,18 +21,18 @@ module.exports = {
     hot: true,
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
+  mode: 'development',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
-      }, {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components|dist)/,
-        loader: 'eslint-loader',
+        use: [
+          'babel-loader',
+          'eslint-loader',
+        ],
       },
     ],
   },
