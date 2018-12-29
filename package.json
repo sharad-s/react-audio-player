@@ -28,6 +28,7 @@
     "react-dom": ">=15"
   },
   "dependencies": {
+    "mediaelement": "^4.2.9",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {

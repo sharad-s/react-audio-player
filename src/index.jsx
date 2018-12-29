@@ -124,11 +124,12 @@ class ReactAudioPlayer extends Component {
         onPlay={this.onPlay}
         preload={this.props.preload}
         ref={(ref) => { this.audioEl = ref; }}
-        src={this.props.src}
         style={this.props.style}
         title={title}
         {...conditionalProps}
       >
+      <source src={this.props.src}
+            type="audio/mpeg" />
         {incompatibilityMessage}
       </audio>
     );
